@@ -41,3 +41,19 @@ MyRuleSet:
     autoCorrect: true
     active: true
 ```
+
+## Rules
+
+There are three classes:
+```
+PromoButton - Component class name
+
+PromoButtonProps - Props class name
+
+PromoButtonState - State class name
+```
+
+Also, the file name matches the name of the component *promoButton.kt*
+
+1. The prefixes of the class names must be the same "PromoButton"
+2. The file name must match the name of the main class + be with a lowercase letter
