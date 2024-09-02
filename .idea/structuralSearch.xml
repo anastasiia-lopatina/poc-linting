@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StructuralSearch">
+    <searchConfiguration name="Check class name and compare it with file name" text="class $ClassComponent$ : $ReactComponent$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default" search_injected="false">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ReactComponent" regexp="RComponent.+" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassComponent" script="&quot;var fileName = __context__.containingFile.name &#10;var className = __context__.name &#10;fileName.substring(0, fileName.length() - &quot;.kt&quot;.length()) != className&quot;" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Check class name for state and file name" text="class $ClassState$ : $ReactState$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ReactState" regexp="RState" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassState" script="&quot;var fileName = __context__.containingFile.name &#10;var className = __context__.name f&#10;ileName.substring(0, fileName.length() - &quot;.kt&quot;.length()) != className.substring(0, fileName.length() - &quot;State&quot;.length())&quot;" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Compare name of class for props and file name" text="class $ClassProps$ : $ReactProps$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ClassProps" script="&quot;var fileName = __context__.containingFile.name &#10;var className = __context__.name &#10;fileName.substring(0, fileName.length() - &quot;.kt&quot;.length()) != className.substring(0, fileName.length() - &quot;Props&quot;.length())&quot;" within="" contains="" />
+      <constraint name="ReactProps" regexp="RProps" withinHierarchy="true" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="successful example of comparing names of several classes in a file" text="class $ClassProps$ : $ReactProps$ &#10;&#10;class $ClassState$ : $ReactState$&#10;&#10;class $ClassComponent$ : $ReactComponent$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ReactState" regexp="RState" withinHierarchy="true" within="" contains="" />
+      <constraint name="ReactComponent" regexp="RComponent.+" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassProps" within="" contains="" />
+      <constraint name="ReactProps" regexp="RProps" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassState" script="&quot;__log__.info(__context__)&quot;" within="" contains="" />
+      <constraint name="ClassComponent" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="unsuccessful example of comparing names of several classes in a file" text="class $ClassProps$ : $ReactProps$ &#10;&#10;class $ClassState$ : $ReactState$&#10;&#10;class $ClassComponent$ : $ReactComponent$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ReactState" regexp="RState" withinHierarchy="true" within="" contains="" />
+      <constraint name="ReactComponent" regexp="RComponent.+" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassProps" within="" contains="" />
+      <constraint name="ReactProps" regexp="RProps" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassState" script="&quot;__log__.info(__context__)&quot;" within="" contains="" />
+      <constraint name="ClassComponent" within="" contains="" />
+    </searchConfiguration>
+    <searchConfiguration name="Unsuccessful example of comparing names of several classes in a file" text="class $ClassProps$ : $ReactProps$ &#10;&#10;class $ClassState$ : $ReactState$&#10;&#10;class $ClassComponent$ : $ReactComponent$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+      <constraint name="__context__" within="" contains="" />
+      <constraint name="ReactState" regexp="RState" withinHierarchy="true" within="" contains="" />
+      <constraint name="ReactComponent" regexp="RComponent.+" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassProps" within="" contains="" />
+      <constraint name="ReactProps" regexp="RProps" withinHierarchy="true" within="" contains="" />
+      <constraint name="ClassState" script="&quot;__log__.info(__context__)&quot;" within="" contains="" />
+      <constraint name="ClassComponent" within="" contains="" />
+    </searchConfiguration>
+  </component>
+</project>

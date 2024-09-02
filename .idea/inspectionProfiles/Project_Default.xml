@@ -1,0 +1,12 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <searchConfiguration name="Class name and file name are different" text="class $ClassComponent$ : $ReactComponent$" recursive="true" caseInsensitive="false" type="Kotlin" pattern_context="default">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="ReactComponent" regexp="RComponent.+" withinHierarchy="true" within="" contains="" />
+        <constraint name="ClassComponent" script="&quot;var fileName = __context__.containingFile.name &#10;var className = __context__.name &#10;fileName.substring(0, fileName.length() - &quot;.kt&quot;.length()) != className&quot;" within="" contains="" />
+      </searchConfiguration>
+    </inspection_tool>
+  </profile>
+</component>
