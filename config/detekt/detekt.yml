@@ -611,4 +611,5 @@ MyRuleSet:
   ReactPropsClassNameCheck:
     active: true
   ReactStateClassNameCheck:
+    autoCorrect: true
     active: true
